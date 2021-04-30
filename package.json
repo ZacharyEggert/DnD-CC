@@ -1,0 +1,29 @@
+{
+  "name": "dnd-cc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZacharyEggert/DnD-CC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZacharyEggert/DnD-CC/issues"
+  },
+  "homepage": "https://github.com/ZacharyEggert/DnD-CC#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
