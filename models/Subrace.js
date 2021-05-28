@@ -1,18 +1,23 @@
 const { Model, DataTypes } = require('sequelize');
-const { WEAPON_CATEGORY_ENUM } = require('./_ENUM');
 
 const sequelize = require('../config/connection');
 
+class Subrace extends Model {}
 
-class Weapon extends Model {}
-
-Weapon.init(
+Subrace.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+        },
+        raceId: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'race',
+                key: 'id',
+            },
         },
         name: {
             type: DataTypes.STRING,
@@ -21,24 +26,14 @@ Weapon.init(
         description: {
             type: DataTypes.TEXT,
         },
-        weight: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        category: {
-            type: DataTypes.ENUM(WEAPON_CATEGORY_ENUM),
-        },
-        cost: {
-            type: DataTypes.INTEGER,
-        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'weapon',
+        modelName: 'subrace',
     }
 );
 
-module.exports = Weapon;
+module.exports = Subrace;
