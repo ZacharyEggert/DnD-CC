@@ -7,4 +7,15 @@ module.exports = {
         'martial ranged',
         'unarmed',
     ],
+    ALIGNMENT_ENUM: [
+        'lawful evil',
+        'lawful neutral',
+        'lawful good',
+        'neutral evil',
+        'true neutral',
+        'neutral good',
+        'chaotic evil',
+        'chaotic neutral',
+        'chaotic good',
+    ]
 };

@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class Spell extends Model {}
+class Background extends Model {}
 
-Spell.init(
+Background.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -25,8 +25,8 @@ Spell.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'spell',
+        modelName: 'background',
     }
 );
 
-module.exports = Spell;
+module.exports = Background;
